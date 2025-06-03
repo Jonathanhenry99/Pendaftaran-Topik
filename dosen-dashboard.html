@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dosen - Sistem Pendaftaran Topik Tugas Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Sistem TA</h2>
+            </div>
+            <div class="nav-links">
+                <a href="dosen-dashboard.html" class="active">Dashboard</a>
+                <a href="dosen-topik.html">Kelola Topik</a>
+                <a href="dosen-pengajuan.html">Pengajuan Masuk</a>
+            </div>
+            <div class="user-info">
+                <span>Dosen: Dr. Ahmad Sudrajat</span>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="dashboard-header">
+            <h1>Dashboard Dosen</h1>
+            <p>Selamat datang di Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Topik Saya</h3>
+                    <p class="stat-number">5</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Pengajuan Masuk</h3>
+                    <p class="stat-number">3</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Topik Terkonfirmasi</h3>
+                    <p class="stat-number">2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Aksi Cepat</h2>
+            <div class="action-buttons">
+                <a href="dosen-topik.html" class="action-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Tambah Topik Baru</span>
+                </a>
+                <a href="dosen-pengajuan.html" class="action-btn">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Lihat Pengajuan Masuk</span>
+                </a>
+                <a href="#" class="action-btn">
+                    <i class="fas fa-file-export"></i>
+                    <span>Ekspor Data Topik</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="recent-applications">
+            <div class="section-header">
+                <h2>Pengajuan Terbaru</h2>
+                <a href="dosen-pengajuan.html" class="view-all">Lihat Semua</a>
+            </div>
+            <div class="applications-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mahasiswa</th>
+                            <th>Topik</th>
+                            <th>Tanggal Pengajuan</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe (12345678)</td>
+                            <td>Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</td>
+                            <td>15 Mei 2023</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                            <td>
+                                <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-action approve"><i class="fas fa-check"></i></button>
+                                <button class="btn-action reject"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith (87654321)</td>
+                            <td>Pengembangan Web Application dengan Arsitektur Microservices</td>
+                            <td>14 Mei 2023</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                            <td>
+                                <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-action approve"><i class="fas fa-check"></i></button>
+                                <button class="btn-action reject"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bob Johnson (23456789)</td>
+                            <td>Natural Language Processing untuk Analisis Sentimen Media Sosial</td>
+                            <td>13 Mei 2023</td>
+                            <td><span class="status-badge pending">Menunggu</span></td>
+                            <td>
+                                <button class="btn-action view"><i class="fas fa-eye"></i></button>
+                                <button class="btn-action approve"><i class="fas fa-check"></i></button>
+                                <button class="btn-action reject"><i class="fas fa-times"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="my-topics">
+            <div class="section-header">
+                <h2>Topik Saya</h2>
+                <a href="dosen-topik.html" class="view-all">Kelola Topik</a>
+            </div>
+            <div class="topics-grid">
+                <div class="topic-item">
+                    <h3>Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</h3>
+                    <p class="topic-status available">Tersedia</p>
+                    <p class="topic-applicants"><i class="fas fa-user-graduate"></i> 1 Pengajuan</p>
+                </div>
+                <div class="topic-item">
+                    <h3>Pengembangan Web Application dengan Arsitektur Microservices</h3>
+                    <p class="topic-status available">Tersedia</p>
+                    <p class="topic-applicants"><i class="fas fa-user-graduate"></i> 1 Pengajuan</p>
+                </div>
+                <div class="topic-item">
+                    <h3>Natural Language Processing untuk Analisis Sentimen Media Sosial</h3>
+                    <p class="topic-status available">Tersedia</p>
+                    <p class="topic-applicants"><i class="fas fa-user-graduate"></i> 1 Pengajuan</p>
+                </div>
+                <div class="topic-item">
+                    <h3>Sistem Rekomendasi Berbasis Collaborative Filtering</h3>
+                    <p class="topic-status taken">Sudah Diambil</p>
+                    <p class="topic-applicants"><i class="fas fa-user-graduate"></i> Alice Johnson</p>
+                </div>
+                <div class="topic-item">
+                    <h3>Pengembangan Chatbot dengan Natural Language Understanding</h3>
+                    <p class="topic-status taken">Sudah Diambil</p>
+                    <p class="topic-applicants"><i class="fas fa-user-graduate"></i> Charlie Brown</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+    </footer>
+</body>
+</html>

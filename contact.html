@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Dosen - Sistem Pendaftaran Topik Tugas Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Sistem TA</h2>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="topik.html">Daftar Topik</a>
+                <a href="status.html">Status Pendaftaran</a>
+            </div>
+            <div class="user-info">
+                <span>Mahasiswa: John Doe</span>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Hubungi Dosen</h1>
+            <p>Kirim pesan kepada dosen untuk mengajukan minat pada topik tugas akhir</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="dosen-info">
+                <div class="dosen-profile">
+                    <img src="https://via.placeholder.com/150" alt="Foto Dosen" class="dosen-photo">
+                    <h2>Dr. Ahmad Sudrajat</h2>
+                    <p class="dosen-title">Profesor Bidang Artificial Intelligence</p>
+                    <div class="dosen-contact-info">
+                        <p><i class="fas fa-envelope"></i> ahmad.sudrajat@university.ac.id</p>
+                        <p><i class="fas fa-phone"></i> +62-123-4567-890</p>
+                        <p><i class="fas fa-building"></i> Gedung A, Lantai 3, Ruang 302</p>
+                    </div>
+                </div>
+                <div class="dosen-topics">
+                    <h3>Topik yang Ditawarkan:</h3>
+                    <ul>
+                        <li>Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</li>
+                        <li>Pengembangan Web Application dengan Arsitektur Microservices</li>
+                        <li>Natural Language Processing untuk Analisis Sentimen Media Sosial</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="topicSelect">Pilih Topik yang Diminati</label>
+                        <select id="topicSelect" required>
+                            <option value="">-- Pilih Topik --</option>
+                            <option value="topic1">Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</option>
+                            <option value="topic2">Pengembangan Web Application dengan Arsitektur Microservices</option>
+                            <option value="topic3">Natural Language Processing untuk Analisis Sentimen Media Sosial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" placeholder="Minat Topik Tugas Akhir: [Nama Topik]" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" rows="6" placeholder="Perkenalkan diri Anda dan jelaskan mengapa Anda tertarik dengan topik ini. Sertakan juga pengalaman atau keterampilan relevan yang Anda miliki." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment">Lampiran (opsional)</label>
+                        <input type="file" id="attachment">
+                        <small>Anda dapat melampirkan CV, portofolio, atau dokumen pendukung lainnya (maks. 5MB)</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="location.href='topik.html'">Kembali</button>
+                        <button type="submit" class="btn-primary">Kirim Pesan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Pesan Anda telah dikirim ke dosen. Silakan tunggu balasan dalam 2-3 hari kerja.');
+            window.location.href = 'status.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa - Sistem Pendaftaran Topik Tugas Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Sistem TA</h2>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="topik.html">Daftar Topik</a>
+                <a href="status.html">Status Pendaftaran</a>
+            </div>
+            <div class="user-info">
+                <span>Mahasiswa: John Doe</span>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="dashboard-header">
+            <h1>Dashboard Mahasiswa</h1>
+            <p>Selamat datang di Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Topik Tersedia</h3>
+                    <p class="stat-number">24</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Dosen Pembimbing</h3>
+                    <p class="stat-number">12</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Status Pendaftaran</h3>
+                    <p class="stat-status">Belum Mendaftar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Aksi Cepat</h2>
+            <div class="action-buttons">
+                <a href="topik.html" class="action-btn">
+                    <i class="fas fa-search"></i>
+                    <span>Lihat Topik Tersedia</span>
+                </a>
+                <a href="#" class="action-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Hubungi Dosen</span>
+                </a>
+                <a href="status.html" class="action-btn">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cek Status Pendaftaran</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="announcement-section">
+            <h2>Pengumuman Terbaru</h2>
+            <div class="announcement-card">
+                <div class="announcement-header">
+                    <h3>Pendaftaran Topik Tugas Akhir Semester Genap 2023/2024</h3>
+                    <span class="date">12 Mei 2023</span>
+                </div>
+                <div class="announcement-content">
+                    <p>Pendaftaran topik tugas akhir untuk semester genap 2023/2024 telah dibuka. Mahasiswa diharapkan segera memilih topik dan menghubungi dosen pembimbing sebelum tanggal 30 Mei 2023.</p>
+                </div>
+            </div>
+            <div class="announcement-card">
+                <div class="announcement-header">
+                    <h3>Penambahan Topik Baru</h3>
+                    <span class="date">10 Mei 2023</span>
+                </div>
+                <div class="announcement-content">
+                    <p>Beberapa topik baru telah ditambahkan oleh dosen. Silakan cek daftar topik untuk informasi lebih lanjut.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+    </footer>
+</body>
+</html>

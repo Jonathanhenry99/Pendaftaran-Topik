@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Topik - Sistem Pendaftaran Topik Tugas Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Sistem TA</h2>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="topik.html" class="active">Daftar Topik</a>
+                <a href="status.html">Status Pendaftaran</a>
+            </div>
+            <div class="user-info">
+                <span>Mahasiswa: John Doe</span>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Daftar Topik Tugas Akhir</h1>
+            <p>Pilih topik yang sesuai dengan minat dan kemampuan Anda</p>
+        </div>
+
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchTopic" placeholder="Cari topik...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filter-options">
+                <select id="filterDosen">
+                    <option value="">Semua Dosen</option>
+                    <option value="dosen1">Dr. Ahmad Sudrajat</option>
+                    <option value="dosen2">Prof. Budi Santoso</option>
+                    <option value="dosen3">Dr. Citra Dewi</option>
+                </select>
+                <select id="filterBidang">
+                    <option value="">Semua Bidang</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="web">Web Development</option>
+                    <option value="mobile">Mobile Development</option>
+                    <option value="network">Computer Network</option>
+                </select>
+                <select id="filterStatus">
+                    <option value="">Semua Status</option>
+                    <option value="available">Tersedia</option>
+                    <option value="taken">Sudah Diambil</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="topics-container">
+            <div class="topic-card available">
+                <div class="topic-header">
+                    <h3>Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</h3>
+                    <span class="topic-status available">Tersedia</span>
+                </div>
+                <div class="topic-details">
+                    <p><strong>Dosen:</strong> Dr. Ahmad Sudrajat</p>
+                    <p><strong>Bidang:</strong> Artificial Intelligence, Computer Vision</p>
+                    <p><strong>Deskripsi:</strong> Penelitian ini bertujuan untuk mengembangkan model deep learning untuk mendeteksi objek pada citra medis seperti X-ray, CT Scan, atau MRI. Mahasiswa diharapkan memiliki pengetahuan dasar tentang deep learning dan pengolahan citra.</p>
+                </div>
+                <div class="topic-actions">
+                    <button class="btn-contact" onclick="location.href='contact.html?dosen=ahmad'">Hubungi Dosen</button>
+                    <button class="btn-details" onclick="showTopicDetails(1)">Detail Lengkap</button>
+                </div>
+            </div>
+
+            <div class="topic-card available">
+                <div class="topic-header">
+                    <h3>Pengembangan Aplikasi Mobile untuk Monitoring Kesehatan Lansia</h3>
+                    <span class="topic-status available">Tersedia</span>
+                </div>
+                <div class="topic-details">
+                    <p><strong>Dosen:</strong> Prof. Budi Santoso</p>
+                    <p><strong>Bidang:</strong> Mobile Development, Healthcare IT</p>
+                    <p><strong>Deskripsi:</strong> Proyek ini bertujuan untuk mengembangkan aplikasi mobile yang dapat membantu monitoring kesehatan lansia, termasuk pengingat obat, pemantauan tanda vital, dan komunikasi dengan keluarga atau tenaga medis.</p>
+                </div>
+                <div class="topic-actions">
+                    <button class="btn-contact" onclick="location.href='contact.html?dosen=budi'">Hubungi Dosen</button>
+                    <button class="btn-details" onclick="showTopicDetails(2)">Detail Lengkap</button>
+                </div>
+            </div>
+
+            <div class="topic-card taken">
+                <div class="topic-header">
+                    <h3>Analisis Keamanan Jaringan IoT menggunakan Machine Learning</h3>
+                    <span class="topic-status taken">Sudah Diambil</span>
+                </div>
+                <div class="topic-details">
+                    <p><strong>Dosen:</strong> Dr. Citra Dewi</p>
+                    <p><strong>Bidang:</strong> Computer Network, IoT, Machine Learning</p>
+                    <p><strong>Deskripsi:</strong> Penelitian ini fokus pada analisis keamanan jaringan IoT dengan memanfaatkan teknik machine learning untuk mendeteksi anomali dan serangan pada perangkat IoT.</p>
+                </div>
+                <div class="topic-actions">
+                    <button class="btn-contact" disabled>Hubungi Dosen</button>
+                    <button class="btn-details" onclick="showTopicDetails(3)">Detail Lengkap</button>
+                </div>
+            </div>
+
+            <div class="topic-card available">
+                <div class="topic-header">
+                    <h3>Pengembangan Web Application dengan Arsitektur Microservices</h3>
+                    <span class="topic-status available">Tersedia</span>
+                </div>
+                <div class="topic-details">
+                    <p><strong>Dosen:</strong> Dr. Ahmad Sudrajat</p>
+                    <p><strong>Bidang:</strong> Web Development, Software Architecture</p>
+                    <p><strong>Deskripsi:</strong> Proyek ini bertujuan untuk mengembangkan aplikasi web dengan arsitektur microservices, termasuk implementasi API Gateway, service discovery, dan containerization menggunakan Docker dan Kubernetes.</p>
+                </div>
+                <div class="topic-actions">
+                    <button class="btn-contact" onclick="location.href='contact.html?dosen=ahmad'">Hubungi Dosen</button>
+                    <button class="btn-details" onclick="showTopicDetails(4)">Detail Lengkap</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+    </footer>
+</body>
+</html>

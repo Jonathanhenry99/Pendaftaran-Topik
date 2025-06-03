@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Pendaftaran - Sistem Pendaftaran Topik Tugas Akhir</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Sistem TA</h2>
+            </div>
+            <div class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="topik.html">Daftar Topik</a>
+                <a href="status.html" class="active">Status Pendaftaran</a>
+            </div>
+            <div class="user-info">
+                <span>Mahasiswa: John Doe</span>
+                <a href="index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Status Pendaftaran Topik</h1>
+            <p>Pantau status pendaftaran topik tugas akhir Anda</p>
+        </div>
+
+        <div class="status-container">
+            <div class="status-card">
+                <div class="status-header">
+                    <h3>Implementasi Deep Learning untuk Deteksi Objek pada Citra Medis</h3>
+                    <span class="status-badge pending">Menunggu Konfirmasi</span>
+                </div>
+                <div class="status-details">
+                    <p><strong>Dosen:</strong> Dr. Ahmad Sudrajat</p>
+                    <p><strong>Tanggal Pengajuan:</strong> 15 Mei 2023</p>
+                    <p><strong>Status Terakhir:</strong> Email telah dikirim, menunggu konfirmasi dari dosen</p>
+                </div>
+                <div class="status-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Email Dikirim</h4>
+                            <p>15 Mei 2023, 14:30</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item pending">
+                        <div class="timeline-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Menunggu Konfirmasi</h4>
+                            <p>Estimasi: 2-3 hari kerja</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Konfirmasi Dosen</h4>
+                            <p>Belum dikonfirmasi</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-file-signature"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Pendaftaran Selesai</h4>
+                            <p>Belum selesai</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-actions">
+                    <button class="btn-secondary"><i class="fas fa-envelope"></i> Kirim Pengingat</button>
+                    <button class="btn-danger"><i class="fas fa-times-circle"></i> Batalkan Pengajuan</button>
+                </div>
+            </div>
+
+            <div class="no-application" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-list fa-4x"></i>
+                    <h3>Belum Ada Pengajuan Topik</h3>
+                    <p>Anda belum mengajukan topik tugas akhir. Silakan lihat daftar topik yang tersedia dan hubungi dosen untuk mengajukan minat Anda.</p>
+                    <button class="btn-primary" onclick="location.href='topik.html'">Lihat Topik Tersedia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Sistem Pendaftaran Topik Tugas Akhir</p>
+        </div>
+    </footer>
+</body>
+</html>
